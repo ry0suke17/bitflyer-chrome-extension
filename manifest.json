@@ -1,0 +1,31 @@
+{
+  "name": "bitFlyer Chrome Extension",
+  "version": "1.0.0",
+  "description": "bitFlyer Chrome Extension!",
+  "manifest_version": 2,
+  "background": {
+    "scripts": ["dist/background.bundle.js"],
+    "persistent": false
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://lightning.bitflyer.com/trade"],
+      "js": ["dist/contentscriptmenu.bundle.js"],
+      "all_frames": true
+    },
+    {
+      "matches": ["https://lightchart.bitflyer.com/embed*symbol=FX_BTC_JPY*"],
+      "js": ["dist/contentscriptchart.bundle.js"],
+      "all_frames": true
+    }
+  ],
+  "icons": {
+    "32": "src/assets/favicon-32x32.png"
+  },
+  "browser_action": {
+    "default_icon": {
+      "32": "src/assets/favicon-32x32.png"
+    }
+  },
+  "permissions": ["webNavigation", "storage", "https://*.bitflyer.com/*"]
+}
