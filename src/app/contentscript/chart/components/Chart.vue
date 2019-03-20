@@ -80,6 +80,9 @@ export default class Chart extends Vue {
     const sizeText = (await ChromeStorage.getSize()) || '';
     const size = parseFloat(sizeText);
 
+    // TODO: 値幅は入力フォームから指定できるようにする
+    const range = 100;
+
     if (isNaN(size)) {
       this.displayError('数量が正しくありません。');
       return;
@@ -97,7 +100,7 @@ export default class Chart extends Vue {
         break;
       case 'STOP_LIMIT':
         // トリガー価格を計算する {
-        const triggerPrice = side === 'BUY' ? price - 10 : price + 10;
+        const triggerPrice = side === 'BUY' ? price - range : price + range;
         // }
         sendMessageSendParentOrder({
           order_method: 'SIMPLE',
