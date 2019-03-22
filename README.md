@@ -15,3 +15,10 @@ Install according to the following tutorial.
 1. Changed size for BTC from menu
 1. Changed trade mode (long or short) from menu
 1. Click the chart while holding down the Ctrl and Meta key
+
+## Development
+
+Prerequisites
+
+- `node` 10.15.2
+- `npm` 6.4.1
