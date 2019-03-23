@@ -2,7 +2,7 @@
 
 [![CircleCI](https://circleci.com/gh/yneee/bitflyer-chrome-extension.svg?style=svg&circle-token=e0838e65abb44a71c5f9676cbb38a145de07b7b5)](https://circleci.com/gh/yneee/bitflyer-chrome-extension)
 
-bitflyer-chrome-extension provide following function that send order when click chart view.
+bitflyer-chrome-extension provide function that send order when click chart view.
 
 Not published at Chrome Web Store. So use by Developer mode of Chrome browser.
 
